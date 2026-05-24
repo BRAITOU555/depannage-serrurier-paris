@@ -1,0 +1,13 @@
+{
+  "name": "google-indexing-dsdepannage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Envoi d'URLs dsdepannage.fr vers la Google Indexing API.",
+  "type": "module",
+  "scripts": {
+    "index": "node indexing.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}
