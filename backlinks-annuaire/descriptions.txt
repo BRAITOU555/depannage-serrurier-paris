@@ -1,0 +1,52 @@
+Nom entreprise:
+DS Depannage
+
+Site:
+https://dsdepannage.fr/
+
+Telephone:
+07 57 83 26 26
+
+Email:
+A demander / non trouve sur le site au moment de la preparation.
+
+Categorie principale:
+Serrurier
+
+Categories secondaires:
+- Depannage serrurerie
+- Ouverture de porte
+- Porte claquee
+- Porte fermee a cle
+- Changement de serrure
+- Remplacement de cylindre
+- Porte blindee
+- Urgence serrurier
+
+Zone desservie:
+Paris, Paris 1er a Paris 20e, Ile-de-France selon disponibilite.
+
+Description courte:
+DS Depannage intervient pour les urgences de serrurerie a Paris : ouverture de porte, porte claquee, porte fermee a cle, serrure bloquee, remplacement de cylindre et depannage de porte blindee. Devis annonce avant intervention.
+
+Description longue:
+DS Depannage accompagne les particuliers et professionnels pour les depannages de serrurerie a Paris et en Ile-de-France selon disponibilite. L'entreprise intervient pour l'ouverture de porte claquee, la porte fermee a cle, la serrure bloquee, la cle cassee, le remplacement de cylindre, la porte blindee, les serrures multipoints et les urgences serrurerie. Avant chaque intervention, le probleme est identifie : type de porte, etat du cylindre, verrouillage, acces au logement, porte simple ou blindee. Le prix est annonce avant tout geste technique afin d'eviter les mauvaises surprises.
+
+Services principaux:
+- Ouverture de porte claquee
+- Ouverture de porte fermee a cle
+- Serrure bloquee
+- Cle cassee dans la serrure
+- Remplacement de cylindre
+- Changement de serrure
+- Depannage de porte blindee
+- Serrure multipoints
+- Urgence serrurier Paris
+
+Consignes de coherence NAP:
+- Utiliser le nom exact "DS Depannage".
+- Utiliser le telephone exact "07 57 83 26 26".
+- Utiliser l'URL exacte "https://dsdepannage.fr/".
+- Eviter les ancres suroptimisees.
+- Ne pas creer de fiche payante sans validation.
+- Ne pas contourner captcha, validation email, SMS ou controle manuel.
