@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://depannage-serrurier-paris.fr/sitemap.xml
+Sitemap: https://dsdepannage.fr/sitemap.xml
