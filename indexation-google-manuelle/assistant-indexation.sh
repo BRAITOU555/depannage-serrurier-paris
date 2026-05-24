@@ -19,7 +19,7 @@ echo "Dans Search Console: colle l'URL, lance l'inspection, clique Demander une 
 echo "Reviens ici et appuie sur Entree pour copier la suivante."
 echo ""
 
-while IFS= read -r url; do
+while IFS= read -r url <&3; do
   [[ -z "${url// }" ]] && continue
   current=$((current + 1))
 
@@ -29,9 +29,9 @@ while IFS= read -r url; do
   echo ""
 
   if [[ "$current" -lt "$total" ]]; then
-    read -r -p "Quand tu as valide celle-ci, appuie sur Entree pour la suivante..."
+    read -r -p "Quand tu as valide celle-ci, appuie sur Entree pour la suivante..." </dev/tty
     echo ""
   fi
-done < "$URLS_FILE"
+done 3< "$URLS_FILE"
 
 echo "Termine: toutes les URLs prioritaires ont ete copiees une par une."
