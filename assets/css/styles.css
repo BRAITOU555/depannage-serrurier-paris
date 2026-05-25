@@ -359,6 +359,29 @@ p {
   box-shadow: 0 20px 42px rgba(0, 0, 0, .24);
 }
 
+.vitrerie-page .refined-hero .hero-inner {
+  min-height: 330px;
+  padding-top: 28px;
+  padding-bottom: 54px;
+}
+
+.vitrerie-page .hero-visual {
+  min-height: 220px;
+}
+
+.vitrerie-page .hero-photo {
+  width: min(520px, 100%);
+  aspect-ratio: 16 / 9;
+  border-width: 6px;
+}
+
+.vitrerie-page .context-panel img {
+  height: auto;
+  max-height: 320px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
 .door {
   position: relative;
   width: min(300px, 70vw);
@@ -1721,6 +1744,26 @@ section {
     aspect-ratio: 1.18 / 1;
     border-width: 8px;
     border-radius: 14px;
+  }
+
+  .vitrerie-page .hero {
+    margin-bottom: 42px;
+  }
+
+  .vitrerie-page .hero-visual {
+    width: min(340px, 92vw);
+    margin-bottom: -58px;
+  }
+
+  .vitrerie-page .hero-photo {
+    aspect-ratio: 16 / 9;
+    border-width: 6px;
+  }
+
+  .vitrerie-page .context-panel img {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    max-height: none;
   }
 
   .hero::after {
