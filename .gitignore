@@ -1,1 +1,5 @@
 .DS_Store
+service-account.json
+google-indexing/service-account.json
+google-indexing/node_modules/
+npm-debug.log*

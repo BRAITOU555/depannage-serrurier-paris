@@ -30,6 +30,34 @@ function isAllowedUrl(url) {
   return ALLOWED_PREFIXES.some((prefix) => url.startsWith(prefix));
 }
 
+function explainGoogleError(message) {
+  if (/Failed to verify the URL ownership|Permission denied/i.test(message)) {
+    return [
+      message,
+      "Cause probable: le compte de service n'est pas proprietaire ou utilisateur complet de la propriete Search Console qui couvre cette URL.",
+      "A verifier: Search Console > Parametres > Utilisateurs et autorisations, avec l'email client du service-account.json."
+    ].join(" ");
+  }
+
+  if (/Quota exceeded/i.test(message)) {
+    return [
+      message,
+      "Cause probable: quota journalier Google Indexing API atteint.",
+      "Solution: relancer demain ou demander une augmentation de quota dans Google Cloud."
+    ].join(" ");
+  }
+
+  if (/API has not been used|disabled/i.test(message)) {
+    return [
+      message,
+      "Cause probable: Google Indexing API non activee sur le projet Google Cloud du compte de service.",
+      "Solution: activer Web Search Indexing API / Indexing API dans Google Cloud."
+    ].join(" ");
+  }
+
+  return message;
+}
+
 async function readUrls() {
   const content = await fs.readFile(URLS_FILE, "utf8");
   const urls = [];
@@ -130,7 +158,8 @@ async function main() {
       });
     } catch (error) {
       errorCount += 1;
-      const message = error?.response?.data?.error?.message || error.message || "Erreur inconnue";
+      const rawMessage = error?.response?.data?.error?.message || error.message || "Erreur inconnue";
+      const message = explainGoogleError(rawMessage);
       errors.push({ url, message });
       console.error(`ERREUR: ${message}`);
       await appendLog({

@@ -5,6 +5,7 @@
   "description": "Envoi d'URLs dsdepannage.fr vers la Google Indexing API.",
   "type": "module",
   "scripts": {
+    "start": "node indexing.js",
     "index": "node indexing.js"
   },
   "dependencies": {
