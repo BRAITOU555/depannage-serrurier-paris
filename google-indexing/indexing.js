@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const URLS_FILE = path.join(__dirname, "urls.txt");
 const KEY_FILE = path.join(__dirname, "service-account.json");
+const LOG_FILE = path.join(__dirname, "sent-log.csv");
 const ALLOWED_PREFIXES = [
   "https://dsdepannage.fr/",
   "https://www.dsdepannage.fr/"
@@ -47,6 +48,27 @@ async function readUrls() {
     });
 
   return { urls: [...new Set(urls)], rejected };
+}
+
+function csvEscape(value) {
+  return `"${String(value ?? "").replaceAll('"', '""')}"`;
+}
+
+async function appendLog({ url, status, message }) {
+  const exists = await fileExists(LOG_FILE);
+  const now = new Date().toISOString();
+  const line = [
+    now,
+    url,
+    status,
+    message
+  ].map(csvEscape).join(",") + "\n";
+
+  if (!exists) {
+    await fs.writeFile(LOG_FILE, "date,url,status,message\n", "utf8");
+  }
+
+  await fs.appendFile(LOG_FILE, line, "utf8");
 }
 
 async function main() {
@@ -101,11 +123,21 @@ async function main() {
       successCount += 1;
       const notifyTime = response.data?.urlNotificationMetadata?.latestUpdate?.notifyTime;
       console.log(`OK${notifyTime ? ` - notifyTime: ${notifyTime}` : ""}`);
+      await appendLog({
+        url,
+        status: "OK",
+        message: notifyTime ? `notifyTime: ${notifyTime}` : "URL_UPDATED envoye"
+      });
     } catch (error) {
       errorCount += 1;
       const message = error?.response?.data?.error?.message || error.message || "Erreur inconnue";
       errors.push({ url, message });
       console.error(`ERREUR: ${message}`);
+      await appendLog({
+        url,
+        status: "ERREUR",
+        message
+      });
     }
 
     if (current < urls.length) {
