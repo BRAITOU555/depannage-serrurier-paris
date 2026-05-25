@@ -830,8 +830,8 @@ section {
   width: min(1140px, calc(100% - 32px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .zone-family-grid.single {
@@ -839,38 +839,84 @@ section {
 }
 
 .zone-family-card {
-  padding: 24px;
-  border-radius: 18px;
+  padding: 0;
+  border-radius: 12px;
   background: var(--white);
   border: 1px solid var(--line);
-  box-shadow: 0 14px 34px rgba(17, 35, 68, .06);
+  box-shadow: 0 10px 24px rgba(17, 35, 68, .045);
+  overflow: hidden;
 }
 
-.zone-family-card h3 {
+.zone-family-card h3,
+.zone-family-card summary {
   color: var(--ink);
+}
+
+.zone-family-card summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 15px 44px 15px 16px;
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.zone-family-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.zone-family-card summary::after {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft-red);
+  color: var(--red);
+  font-size: 17px;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.zone-family-card[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.zone-family-card[open] summary::after {
+  content: "–";
+  background: var(--red);
+  color: var(--white);
 }
 
 .zone-family-card div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 10px;
+  padding: 14px 16px 16px;
 }
 
 .zone-family-card a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  min-height: 38px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: var(--pale);
+  min-height: 30px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(228, 233, 242, .8);
   color: var(--ink);
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.25;
 }
 
 .zone-family-card a:hover,
 .zone-family-card a.active {
-  background: var(--red);
-  color: var(--white);
+  color: var(--red);
 }
 
 .home-hero {
@@ -1746,10 +1792,18 @@ section {
   .editorial-ribbon article,
   .context-panel,
   .note-card,
-  .scenario-grid article,
-  .zone-family-card {
+  .scenario-grid article {
     border-radius: 12px;
     padding: 20px;
+  }
+
+  .zone-family-card {
+    border-radius: 12px;
+    padding: 0;
+  }
+
+  .zone-family-card div {
+    grid-template-columns: 1fr;
   }
 
   .local-layout,
