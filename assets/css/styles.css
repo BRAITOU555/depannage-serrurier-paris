@@ -979,6 +979,32 @@ section {
   }
 }
 
+.other-zone-card .other-zone-groups {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.other-zone-city {
+  padding: 12px;
+  border: 1px solid rgba(228, 233, 242, .9);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.other-zone-city h3 {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-size: 16px;
+}
+
+.other-zone-city div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 10px;
+  padding: 0;
+}
+
 .home-hero {
   padding: 0;
   background:
@@ -1726,6 +1752,11 @@ section {
   .service-deep-grid,
   .tariff-grid,
   .editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .other-zone-card .other-zone-groups,
+  .other-zone-city div {
     grid-template-columns: 1fr;
   }
 
