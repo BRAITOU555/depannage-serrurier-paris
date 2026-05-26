@@ -960,6 +960,25 @@ section {
   color: var(--red);
 }
 
+.other-zone-card {
+  border-color: rgba(27, 54, 94, .18);
+  background: #fbfcff;
+}
+
+.other-zone-card summary {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+@media (min-width: 981px) {
+  .other-zone-card {
+    grid-column: 1 / -1;
+  }
+
+  .other-zone-card div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .home-hero {
   padding: 0;
   background:
