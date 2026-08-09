@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>DS Dépannage - Boutique serrurerie et vitrerie</title>
+    <link>https://dsdepannage.fr/boutique/</link>
+    <description>Produits de serrurerie, sécurité et vitrerie proposés par DS Dépannage.</description>
+    <item>
+      <g:id>DS-CYL-A2P-01</g:id>
+      <title>Cylindre haute sécurité A2P</title>
+      <description>Cylindre haute sécurité pour porte d'entrée, conseillé après perte de clés, emménagement ou cylindre usé. Fourniture seule, pose sur devis.</description>
+      <link>https://dsdepannage.fr/boutique/cylindre-haute-securite-a2p.html</link>
+      <g:image_link>https://dsdepannage.fr/images/changement-cylindre-serrure-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>89.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>DS Dépannage</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-SER-3P-01</g:id>
+      <title>Serrure 3 points en applique</title>
+      <description>Serrure multipoints pour renforcer une porte d'entrée. Fourniture seule, installation sur devis après contrôle de compatibilité.</description>
+      <link>https://dsdepannage.fr/boutique/serrure-3-points-applique.html</link>
+      <g:image_link>https://dsdepannage.fr/images/remplacement-serrure-paris.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>249.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>DS Dépannage</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-SER-5P-01</g:id>
+      <title>Serrure carénée 5 points</title>
+      <description>Serrure carénée 5 points pour porte renforcée ou porte blindée. Fourniture seule, pose sur devis.</description>
+      <link>https://dsdepannage.fr/boutique/serrure-carenee-5-points.html</link>
+      <g:image_link>https://dsdepannage.fr/images/pose-serrure-porte-blindee-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>489.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>DS Dépannage</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-ROS-BL-01</g:id>
+      <title>Rosace blindée anti-arrachement</title>
+      <description>Rosace blindée pour protéger le cylindre contre l'arrachement et renforcer une serrure existante.</description>
+      <link>https://dsdepannage.fr/boutique/rosace-blindee-anti-arrachement.html</link>
+      <g:image_link>https://dsdepannage.fr/images/materiel-serrurerie-cylindre-cles-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>59.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>DS Dépannage</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-COF-COMP-01</g:id>
+      <title>Coffre-fort compact domicile</title>
+      <description>Coffre-fort compact pour documents, clés, bijoux et petits objets sensibles. Fourniture seule, fixation sur devis.</description>
+      <link>https://dsdepannage.fr/boutique/coffre-fort-compact-domicile.html</link>
+      <g:image_link>https://dsdepannage.fr/images/coffre-fort-serrurier-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>179.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>DS Dépannage</g:brand>
+      <g:google_product_category>Hardware &gt; Safes</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-VIT-FEUIL-01</g:id>
+      <title>Vitrage feuilleté de sécurité sur mesure</title>
+      <description>Vitrage feuilleté de sécurité pour fenêtre, porte vitrée ou commerce. Prix indicatif au mètre carré, devis avant fabrication.</description>
+      <link>https://dsdepannage.fr/boutique/vitrage-feuillete-securite-sur-mesure.html</link>
+      <g:image_link>https://dsdepannage.fr/images/vitrage-feuillete-securite-evreux-27000.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>129.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>DS Dépannage</g:brand>
+      <g:google_product_category>Hardware &gt; Building Materials &gt; Glass</g:google_product_category>
+    </item>
+  </channel>
+</rss>
