@@ -2213,6 +2213,109 @@ section {
   text-align: center;
 }
 
+.brand-catalog {
+  width: min(1140px, calc(100% - 32px));
+  margin: 0 auto 28px;
+  display: grid;
+  gap: 22px;
+}
+
+.brand-row {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(17, 35, 68, .06);
+}
+
+.brand-heading {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px 24px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.brand-heading span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--soft-red);
+  color: var(--red);
+  font-weight: 800;
+}
+
+.brand-heading h3 {
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.brand-heading p {
+  grid-column: 2;
+  margin-bottom: 0;
+}
+
+.catalog-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.mini-product-card {
+  display: grid;
+  grid-template-columns: 94px 1fr;
+  gap: 12px;
+  align-items: stretch;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+.mini-product-card img {
+  width: 94px;
+  height: 100%;
+  min-height: 112px;
+  object-fit: cover;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+}
+
+.mini-product-card span {
+  display: inline-flex;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--soft-blue);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.mini-product-card h4 {
+  margin: 8px 0 6px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.mini-product-card p {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.mini-product-card strong {
+  display: block;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.mini-product-card a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
 .shop-policy {
   padding: 60px 0;
   max-width: 860px;
@@ -2232,8 +2335,30 @@ section {
   .product-hero,
   .shop-reassurance,
   .product-grid,
-  .shop-info-links {
+  .shop-info-links,
+  .catalog-mini-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brand-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-heading p {
+    grid-column: auto;
+  }
+
+  .brand-row {
+    padding: 14px;
+  }
+
+  .mini-product-card {
+    grid-template-columns: 82px 1fr;
+  }
+
+  .mini-product-card img {
+    width: 82px;
+    min-height: 108px;
   }
 
   .shop-hero {

@@ -5,6 +5,54 @@
     <link>https://dsdepannage.fr/boutique/</link>
     <description>Produits de serrurerie, sécurité et vitrerie proposés par DS Dépannage.</description>
     <item>
+      <g:id>DS-HER-Y7-DE</g:id>
+      <title>Cylindre Héraclès Y7 européen double entrée</title>
+      <description>Cylindre européen Héraclès Y7 pour porte d'entrée. Dimensions à confirmer avant commande, pose sur devis.</description>
+      <link>https://dsdepannage.fr/boutique/cylindre-heracles-y7-europeen.html</link>
+      <g:image_link>https://dsdepannage.fr/images/changement-cylindre-serrure-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>66.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Héraclès</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-HER-Y7-BTN</g:id>
+      <title>Cylindre Héraclès Y7 à bouton</title>
+      <description>Cylindre européen Héraclès Y7 avec bouton intérieur. Ouverture côté logement sans clé, dimensions à confirmer.</description>
+      <link>https://dsdepannage.fr/boutique/cylindre-heracles-y7-bouton.html</link>
+      <g:image_link>https://dsdepannage.fr/images/changement-cylindre-serrure-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>72.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Héraclès</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-HER-Y8-DE</g:id>
+      <title>Cylindre Héraclès Y8 européen</title>
+      <description>Cylindre européen Héraclès Y8 haute sécurité pour porte d'entrée. Fourniture seule, pose sur devis.</description>
+      <link>https://dsdepannage.fr/boutique/cylindre-heracles-y8-europeen.html</link>
+      <g:image_link>https://dsdepannage.fr/images/changement-cylindre-serrure-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>79.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Héraclès</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
+      <g:id>DS-HER-Y8C-DE</g:id>
+      <title>Cylindre Héraclès Y8C européen</title>
+      <description>Cylindre européen Héraclès Y8C haute sécurité avec nouvelle combinaison. Dimensions à confirmer avant commande.</description>
+      <link>https://dsdepannage.fr/boutique/cylindre-heracles-y8c-europeen.html</link>
+      <g:image_link>https://dsdepannage.fr/images/changement-cylindre-serrure-paris.jpg</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>89.00 EUR</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Héraclès</g:brand>
+      <g:google_product_category>Hardware &gt; Locks &amp; Locksmithing</g:google_product_category>
+    </item>
+    <item>
       <g:id>DS-CYL-A2P-01</g:id>
       <title>Cylindre haute sécurité A2P</title>
       <description>Cylindre haute sécurité pour porte d'entrée, conseillé après perte de clés, emménagement ou cylindre usé. Fourniture seule, pose sur devis.</description>
