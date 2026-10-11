@@ -580,3 +580,16 @@ body.virage-page .context-panel h2{font-size:clamp(1.5rem,2.3vw,2.2rem);overflow
   body.virage-page .note-card ul{columns:2;column-gap:28px}
   body.virage-page .note-card li{break-inside:avoid}
 }
+
+/* --- Plus aucun texte posé sur une photo --- */
+body.virage-page .hero-visual{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+body.virage-page .hero-visual .hero-photo{width:100%}
+body.virage-page .hero-visual .key-card{position:static;right:auto;top:auto;margin:18px 0 0 6px;max-width:100%;min-width:0;width:auto;height:auto;transform:rotate(-3deg);padding:10px 18px;border-radius:99px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:2px 10px;text-align:left}
+body.virage-page .hero-visual .key-card span,
+body.virage-page .hero-visual .key-card strong,
+body.virage-page .hero-visual .key-card em{display:inline;margin:0;padding:0;font-size:14px;line-height:1.2}
+body.virage-page .hero-visual .key-card strong{font-size:17px;color:var(--lime)}
+@media(min-width:981px){ body.virage-page .floating-cta{display:none} }
+@media(max-width:760px){
+  body.virage-page .hero-visual .key-card{right:auto;top:auto;max-width:100%;min-width:0;margin:16px 0 0 4px;padding:9px 16px}
+}
