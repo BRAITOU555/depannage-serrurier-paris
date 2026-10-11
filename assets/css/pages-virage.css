@@ -536,3 +536,16 @@ body.virage-page .scenario-grid strong{display:inline-block;background:var(--lim
   body.virage-page .scenario-grid article:last-child:nth-child(odd),
   body.virage-page .price-grid article:last-child:nth-child(odd){grid-column:1/-1}
 }
+
+/* Pastille sur la photo : s'adapte au texte au lieu d'un cercle fixe */
+body.virage-page .key-card{width:auto;height:auto;min-width:112px;max-width:min(220px,62%);border-radius:24px;padding:14px 18px;display:block;text-align:center;transform:rotate(6deg);box-sizing:border-box}
+body.virage-page .key-card span,
+body.virage-page .key-card strong,
+body.virage-page .key-card em{display:block;overflow-wrap:anywhere}
+body.virage-page .key-card strong{font-size:clamp(17px,2vw,22px);line-height:1.08;margin:2px 0}
+body.virage-page .key-card em{padding:0;font-size:11.5px;line-height:1.25}
+@media(max-width:760px){
+  body.virage-page .key-card{min-width:96px;max-width:min(170px,58%);right:6px;top:-12px;padding:10px 12px;border-radius:20px}
+  body.virage-page .key-card strong{font-size:16px}
+  body.virage-page .key-card em{font-size:10.5px;padding:0}
+}
