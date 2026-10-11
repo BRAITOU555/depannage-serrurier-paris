@@ -1,0 +1,198 @@
+/* Page d'accueil — habillage « Virage » : encre #171a17, citron vert #d5ef4b, boutons ronds, ombres décalées.
+   Chargé uniquement par index.html, après styles.css. Tout est limité à body.polished-home. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+body.polished-home{
+  --ink:#171a17;
+  --lime:#d5ef4b;
+  --lime-deep:#c4dd3e;
+  --moss:#71920f;
+  --paper:#f5f7ee;
+  --line:#dfe4d3;
+  --muted:#626762;
+  --blue:#171a17;
+  --red:#171a17;
+  --pale:#f5f7ee;
+  --soft-red:#f5f7ee;
+  --soft-blue:#f5f7ee;
+  --display:'Bricolage Grotesque','DM Sans',system-ui,sans-serif;
+  --radius:22px;
+  font-family:'DM Sans',system-ui,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+body.polished-home h1,
+body.polished-home h2,
+body.polished-home h3{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+body.polished-home h2{font-size:clamp(2rem,4vw,3.2rem)}
+body.polished-home p{color:var(--muted)}
+body.polished-home :focus-visible{outline:3px solid var(--moss);outline-offset:4px;border-radius:6px}
+
+/* ---------- En-tête ---------- */
+body.polished-home .site-header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:none}
+body.polished-home .brand{color:var(--ink)}
+body.polished-home .brand-mark{background:var(--ink);color:var(--lime);border-radius:10px;font-family:var(--display);font-weight:800;transform:skewX(-8deg)}
+body.polished-home .brand strong{font-family:var(--display);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+body.polished-home .brand small{color:var(--muted)}
+body.polished-home .main-menu > a:not(.phone-btn){color:var(--ink);font-weight:500;background:linear-gradient(var(--moss),var(--moss)) 0 100%/0 2px no-repeat;transition:background-size .25s}
+body.polished-home .main-menu > a:not(.phone-btn):hover{background-size:100% 2px;color:var(--ink)}
+body.polished-home .phone-btn{background:var(--ink);color:#fff!important;border-radius:99px;font-weight:700;border:2px solid var(--ink);transition:transform .18s,box-shadow .18s}
+body.polished-home .phone-btn:hover{transform:translate(-2px,-2px);box-shadow:3px 4px 0 var(--lime);background:var(--ink)}
+body.polished-home .menu-toggle{border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:12px}
+
+/* ---------- Boutons ---------- */
+body.polished-home .btn{min-height:54px;padding:14px 28px;font-size:15px;font-weight:700;border:2px solid var(--ink);border-radius:99px;transition:transform .18s,box-shadow .18s,background .18s}
+body.polished-home .btn:hover{transform:translate(-2px,-3px)}
+body.polished-home .btn:active{transform:none;box-shadow:none}
+body.polished-home .btn-primary{background:var(--ink);color:#fff}
+body.polished-home .btn-primary:hover{background:var(--ink);box-shadow:4px 5px 0 var(--lime)}
+body.polished-home .btn-light,
+body.polished-home .btn-secondary{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+body.polished-home .btn-light:hover,
+body.polished-home .btn-secondary:hover{background:transparent;box-shadow:4px 5px 0 var(--ink)}
+
+/* ---------- Hero ---------- */
+body.polished-home .home-hero{position:relative;overflow:hidden;isolation:isolate;background:var(--lime);color:var(--ink)}
+body.polished-home .home-hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 640' preserveAspectRatio='none'%3E%3Cpath d='M-40 560 C 260 560, 380 380, 640 380 S 1040 120, 1480 90' fill='none' stroke='%23171a17' stroke-opacity='.12' stroke-width='64' stroke-linecap='round'/%3E%3Cpath d='M-40 560 C 260 560, 380 380, 640 380 S 1040 120, 1480 90' fill='none' stroke='%23171a17' stroke-opacity='.35' stroke-width='3' stroke-dasharray='3 26' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+body.polished-home .home-hero-inner{width:min(1240px,calc(100% - 10%));padding:52px 0 96px;gap:44px;min-height:0}
+body.polished-home .home-kicker{background:var(--ink);color:var(--lime);border-radius:99px;border:0;font-size:13px;font-weight:600;padding:7px 16px;letter-spacing:.2px}
+body.polished-home .home-hero h1{color:var(--ink);font-size:clamp(2.4rem,5vw,4.6rem);line-height:.98;letter-spacing:-.035em;margin-bottom:22px;animation:vg-rise .7s cubic-bezier(.2,.8,.2,1) both}
+body.polished-home .home-lead{color:#2a2f28;font-size:17px;line-height:1.7;max-width:540px;animation:vg-rise .7s .25s cubic-bezier(.2,.8,.2,1) both}
+body.polished-home .home-actions{animation:vg-rise .7s .4s cubic-bezier(.2,.8,.2,1) both}
+body.polished-home .hero-points span{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;font-weight:600;font-size:13px;box-shadow:2px 3px 0 var(--ink)}
+body.polished-home .home-hero-panel{padding:0;background:var(--ink);border:0;border-radius:32px;box-shadow:10px 12px 0 var(--ink);transform:rotate(1.5deg);transition:transform .4s cubic-bezier(.2,.8,.2,1);background:var(--lime-deep)}
+body.polished-home .home-hero-panel:hover{transform:rotate(0)}
+body.polished-home .home-hero-panel img{border-radius:30px;height:410px}
+body.polished-home .price-stamp{right:-14px;bottom:auto;top:-18px;width:132px;height:132px;padding:0;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 5px 0 #fff;transform:rotate(8deg)}
+body.polished-home .price-stamp span{color:#cfd5c8;font-size:12px;font-weight:600}
+body.polished-home .price-stamp strong{color:var(--lime);font-family:var(--display);font-size:38px;letter-spacing:-.04em}
+body.polished-home .price-stamp em{color:#cfd5c8;font-size:11px}
+
+/* ---------- Bandeau de preuves + défilant ---------- */
+body.polished-home .home-proof{width:min(1240px,calc(100% - 10%));margin:-56px auto 0;gap:14px}
+body.polished-home .home-proof article{background:#fff;border:2px solid var(--ink);border-radius:var(--radius);box-shadow:5px 6px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+body.polished-home .home-proof article:hover{transform:translate(-2px,-3px);box-shadow:7px 9px 0 var(--ink)}
+body.polished-home .home-proof strong{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.03em;color:var(--ink)}
+body.polished-home .home-proof span{color:var(--muted)}
+.vg-ticker{background:var(--ink);color:var(--lime);overflow:hidden;white-space:nowrap;padding:12px 0;margin-top:64px}
+.vg-ticker-track{display:inline-flex;gap:28px;font:700 22px 'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.02em;animation:vg-marquee 38s linear infinite;will-change:transform}
+.vg-ticker-track i{font-style:normal;color:#fff}
+
+/* ---------- Sections ---------- */
+body.polished-home .home-intro,
+body.polished-home .home-services,
+body.polished-home .home-advice,
+body.polished-home .home-editorial,
+body.polished-home .home-process,
+body.polished-home .tariff-panel,
+body.polished-home .shop-preview,
+body.polished-home .zones,
+body.polished-home .reviews,
+body.polished-home .faq,
+body.polished-home .contact{background:#fff}
+body.polished-home .gray,
+body.polished-home .home-editorial.gray{background:var(--paper)}
+body.polished-home .section-heading h2{color:var(--ink)}
+body.polished-home .section-heading p{color:var(--muted)}
+body.polished-home .home-copy-card{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none;transition:border-color .2s,box-shadow .2s}
+body.polished-home .home-copy-card:hover{border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.polished-home .home-copy-card.soft{background:var(--paper)}
+body.polished-home .home-image-frame img{border-radius:32px;box-shadow:10px 12px 0 var(--ink)}
+
+/* Étapes */
+body.polished-home .process-line article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:transform .2s,box-shadow .2s}
+body.polished-home .process-line article:hover{transform:translateY(-4px);box-shadow:-5px 6px 0 var(--lime)}
+body.polished-home .process-line span{background:var(--lime);color:var(--ink);border-radius:50%;font-family:var(--display);font-weight:800}
+
+/* Services, produits, tarifs, avis */
+body.polished-home .service-deep-grid article,
+body.polished-home .product-card,
+body.polished-home .tariff-grid article,
+body.polished-home .review-grid article{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none;transition:transform .2s,border-color .2s,box-shadow .2s;overflow:hidden}
+body.polished-home .service-deep-grid article:hover,
+body.polished-home .product-card:hover,
+body.polished-home .tariff-grid article:hover,
+body.polished-home .review-grid article:hover{transform:translate(-2px,-3px);border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.polished-home .service-deep-grid a,
+body.polished-home .product-card a{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:4px}
+body.polished-home .product-card > span,
+body.polished-home .pill{display:inline-block;background:var(--lime);color:var(--ink);border-radius:99px;font-weight:600;font-size:13px;padding:4px 12px}
+body.polished-home .product-card strong,
+body.polished-home .tariff-grid strong{color:var(--ink);font-family:var(--display);font-weight:800;letter-spacing:-.02em}
+body.polished-home .review-grid strong{color:var(--moss)}
+
+/* Zones */
+body.polished-home .zone-family-card{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none}
+body.polished-home .zone-family-card[open]{border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.polished-home .zone-family-card summary{color:var(--ink);font-family:var(--display);font-weight:800}
+body.polished-home .zone-family-card summary::after{background:var(--lime);color:var(--ink);border-radius:50%}
+body.polished-home .zone-family-card a{color:var(--ink);border-radius:99px}
+body.polished-home .zone-family-card a:hover,
+body.polished-home .zone-family-card a.active{background:var(--lime);color:var(--ink);border-color:var(--ink)}
+
+/* FAQ */
+body.polished-home .faq-list details{border:2px solid var(--line);border-radius:18px;background:#fff;box-shadow:none;transition:border-color .2s,box-shadow .2s}
+body.polished-home .faq-list details[open]{border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.polished-home .faq-list summary{color:var(--ink);font-weight:600}
+body.polished-home .faq-list p{color:var(--muted)}
+
+/* Contact : bloc citron vert */
+body.polished-home .contact{background:var(--lime);border-radius:0;position:relative}
+body.polished-home .contact h2,
+body.polished-home .contact p{color:var(--ink)}
+body.polished-home .big-phone a{color:var(--ink);font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:clamp(2rem,4vw,3rem);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px}
+body.polished-home .contact-form{background:#fff;border:2px solid var(--ink);border-radius:var(--radius);padding:24px;box-shadow:8px 10px 0 var(--ink)}
+body.polished-home .contact-form input,
+body.polished-home .contact-form select,
+body.polished-home .contact-form textarea{border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+body.polished-home .contact-form input:focus,
+body.polished-home .contact-form select:focus,
+body.polished-home .contact-form textarea:focus{border-color:var(--ink);outline:none}
+
+/* Pied de page */
+body.polished-home .footer{background:var(--ink);color:#fff}
+body.polished-home .footer h3{color:var(--lime)}
+body.polished-home .footer p,
+body.polished-home .footer a{color:#b8bfb1}
+body.polished-home .footer a:hover{color:var(--lime)}
+body.polished-home .footer .brand strong{color:#fff}
+body.polished-home .footer .brand small{color:#b8bfb1}
+body.polished-home .footer .brand-mark{background:var(--lime);color:var(--ink)}
+body.polished-home .footer-bottom{border-top:1px solid #353b33;color:#b8bfb1}
+
+/* Boutons flottants mobiles */
+body.polished-home .floating-cta a{background:var(--ink);color:#fff;border-radius:99px;border:2px solid var(--ink)}
+body.polished-home .floating-cta a:first-child{background:var(--lime);color:var(--ink)}
+body.polished-home .floating-cta strong,
+body.polished-home .floating-cta span{color:inherit}
+
+/* ---------- Animations ---------- */
+@keyframes vg-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes vg-marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Mobile ---------- */
+@media(max-width:980px){
+  body.polished-home .home-hero-inner{padding-bottom:84px}
+  body.polished-home .home-hero-panel{max-width:560px;transform:none}
+  body.polished-home .home-proof{margin-top:-48px}
+}
+@media(max-width:760px){
+  body.polished-home .home-hero-inner{padding:30px 0 72px}
+  body.polished-home .home-hero h1{font-size:clamp(2.2rem,10.5vw,3.2rem)}
+  body.polished-home .home-hero-panel{box-shadow:7px 8px 0 var(--ink)}
+  body.polished-home .home-hero-panel img{height:280px}
+  body.polished-home .price-stamp{width:104px;height:104px;right:-6px;top:-14px}
+  body.polished-home .price-stamp strong{font-size:28px}
+  body.polished-home .home-actions{flex-direction:column}
+  body.polished-home .home-actions .btn{width:100%}
+  body.polished-home .home-image-frame img{box-shadow:7px 8px 0 var(--ink)}
+  body.polished-home .contact-form{box-shadow:6px 7px 0 var(--ink)}
+  .vg-ticker-track{font-size:18px;gap:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.polished-home *,body.polished-home *::before,body.polished-home *::after{animation:none!important;transition:none!important}
+  .vg-ticker-track{animation:none!important}
+}
