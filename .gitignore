@@ -3,3 +3,5 @@ service-account.json
 google-indexing/service-account.json
 google-indexing/node_modules/
 npm-debug.log*
+__pycache__/
+*.pyc

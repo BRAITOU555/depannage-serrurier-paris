@@ -1,0 +1,73 @@
+{
+  "site": {
+    "base_url": "https://dsdepannage.fr",
+    "brand": "Dépannage Serrurier Paris",
+    "phone_display": "07 57 83 26 26",
+    "phone_tel": "+33757832626",
+    "siret": "99426581700019",
+    "price_range": "75€-€€"
+  },
+  "model": "claude-sonnet-5-5",
+  "daily_limit": 8,
+  "max_attempts": 3,
+  "similarity_threshold": 0.30,
+  "min_words": 650,
+  "retry_failed_after_days": 7,
+  "use_web_search": false,
+  "services": [
+    {
+      "slug": "serrurier",
+      "label": "Serrurier",
+      "topic": "dépannage de serrurerie à domicile : porte fermée, clé perdue ou cassée, serrure qui bloque, intervention rapide et devis annoncé avant travaux",
+      "hero_image": "serrurerie-paris-boutique-depannage.png",
+      "form_message": "Adresse, type de porte et description du problème"
+    },
+    {
+      "slug": "ouverture-porte-claquee",
+      "label": "Ouverture de porte claquée",
+      "topic": "ouverture de porte claquée sans la casser : technique d'ouverture sans dégât quand la porte est fermée mais pas verrouillée à clé, clés restées à l'intérieur",
+      "hero_image": "ouverture-porte-claquee-serrurier-paris.png",
+      "form_message": "Adresse, étage, type de porte et situation (clés à l'intérieur, enfant ou animal seul)"
+    },
+    {
+      "slug": "changement-serrure",
+      "label": "Changement de serrure",
+      "topic": "remplacement de serrure après effraction, perte de clés, emménagement ou serrure usée, choix du modèle, devis avant pose",
+      "hero_image": "remplacement-serrure-paris.png",
+      "form_message": "Adresse, marque si connue, raison du changement"
+    },
+    {
+      "slug": "serrure-porte-blindee",
+      "label": "Serrure de porte blindée",
+      "topic": "dépannage, réparation et remplacement de serrure de porte blindée : serrure multipoints qui bloque, clé qui force, cylindre à remplacer",
+      "hero_image": "pose-serrure-porte-blindee-paris.jpg",
+      "form_message": "Adresse, marque de la porte si visible, symptôme constaté"
+    }
+  ],
+  "banned_phrases": [
+    "n'hésitez pas", "n’hésitez pas", "il est important de", "il est essentiel de", "il convient de",
+    "dans un monde", "au cœur de", "véritable", "incontournable", "à la pointe", "sur mesure",
+    "solutions adaptées", "solution adaptée", "excellence", "savoir-faire", "notre équipe d'experts",
+    "notre équipe d’experts", "professionnels qualifiés", "qualité optimale", "tranquillité d'esprit",
+    "tranquillité d’esprit", "sérénité", "plongez", "découvrez", "en effet,", "de plus,", "par ailleurs,",
+    "en outre", "force est de", "fort de", "se démarque", "gamme complète", "à votre service",
+    "est un enjeu", "jouer un rôle", "garantir", "assurer la sécurité de votre", "dans le cadre de",
+    "répondre à vos besoins", "vos besoins", "prestations de qualité", "rapidité et efficacité",
+    "en un clin d'œil", "en un clin d’œil", "clé en main", "ne tardez pas", "pas de panique"
+  ],
+  "forbidden_claims_regex": [
+    "\\d+\\s?(€|euros?)",
+    "\\d+\\s?(min|minutes|mn)\\b",
+    "\\bgratuit",
+    "\\bgaranti",
+    "\\bagréé",
+    "\\bcertifi",
+    "\\blabellis",
+    "avis (clients|vérifiés)",
+    "étoiles",
+    "\\d+\\s?ans d['’]expérience",
+    "\\bleader\\b",
+    "\\bn[°o]\\s?1\\b",
+    "—"
+  ]
+}

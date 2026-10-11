@@ -1,0 +1,46 @@
+name: Agent pages locales
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # chaque jour, 05h17 UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Nombre de pages à créer (laisser vide pour la valeur par défaut)"
+        required: false
+
+concurrency:
+  group: agent-seo
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r agent/requirements.txt
+      - name: Lancer l'agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            python agent/agent.py --limit "${{ github.event.inputs.limit }}"
+          else
+            python agent/agent.py
+          fi
+      - name: Publier
+        run: |
+          git config user.name "agent-seo"
+          git config user.email "agent-seo@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Rien à publier"; exit 0; fi
+          git commit -m "Agent : nouvelles pages locales ($(date +%F))"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
