@@ -549,3 +549,24 @@ body.virage-page .key-card em{padding:0;font-size:11.5px;line-height:1.25}
   body.virage-page .key-card strong{font-size:16px}
   body.virage-page .key-card em{font-size:10.5px;padding:0}
 }
+
+/* --- Correctifs mobile (contrôle complet) --- */
+body.virage-page .contact-form label.check{display:flex;align-items:flex-start;gap:10px;text-align:left;font-size:13px;line-height:1.4}
+body.virage-page .contact-form label.check input[type=checkbox]{flex:none;width:20px;height:20px;min-height:0;margin:2px 0 0;padding:0;accent-color:var(--ink)}
+body.virage-page .zones .zone-family-grid.single{grid-template-columns:1fr}
+body.virage-page .zones .zone-family-card{padding:0;min-width:0;overflow:hidden}
+body.virage-page .zones .zone-family-card > h3{font-size:15px;margin:0;padding:16px 18px 4px;text-align:left}
+body.virage-page .info-content .content-grid{box-sizing:border-box}
+@media(max-width:760px){
+  body.virage-page .zones .zone-family-grid,
+  body.virage-page .zones .zone-family-grid.single{grid-template-columns:1fr !important}
+  body.virage-page .info-content{padding-left:18px;padding-right:18px}
+  body.virage-page .info-content .content-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;width:100%;padding:0}
+  body.virage-page .hero-actions{align-items:stretch}
+  body.virage-page .hero-actions .btn{width:100%;justify-content:center;text-align:center;box-sizing:border-box}
+}
+
+@media(max-width:760px){
+  body.virage-page .hero-actions{width:100%;align-self:stretch}
+  body.virage-page .zones .zone-family-card > h3{padding:16px 18px 8px;line-height:1.2}
+}
