@@ -1,0 +1,470 @@
+/* Page d'accueil — habillage « Virage » : encre #171a17, citron vert #d5ef4b, boutons ronds, ombres décalées.
+   Chargé uniquement par index.html, après styles.css. Tout est limité à body.virage-page. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+body.virage-page{
+  --ink:#171a17;
+  --lime:#d5ef4b;
+  --lime-deep:#c4dd3e;
+  --moss:#71920f;
+  --paper:#f5f7ee;
+  --line:#dfe4d3;
+  --muted:#626762;
+  --blue:#171a17;
+  --red:#171a17;
+  --pale:#f5f7ee;
+  --soft-red:#f5f7ee;
+  --soft-blue:#f5f7ee;
+  --display:'Bricolage Grotesque','DM Sans',system-ui,sans-serif;
+  --radius:22px;
+  font-family:'DM Sans',system-ui,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+body.virage-page h1,
+body.virage-page h2,
+body.virage-page h3{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+body.virage-page h2{font-size:clamp(2rem,4vw,3.2rem)}
+body.virage-page p{color:var(--muted)}
+body.virage-page :focus-visible{outline:3px solid var(--moss);outline-offset:4px;border-radius:6px}
+
+/* ---------- En-tête ---------- */
+body.virage-page .site-header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:none}
+body.virage-page .brand{color:var(--ink)}
+body.virage-page .brand-mark{background:var(--ink);color:var(--lime);border-radius:10px;font-family:var(--display);font-weight:800;transform:skewX(-8deg)}
+body.virage-page .brand strong{font-family:var(--display);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+body.virage-page .brand small{color:var(--muted)}
+body.virage-page .main-menu > a:not(.phone-btn){color:var(--ink);font-weight:500;background:linear-gradient(var(--moss),var(--moss)) 0 100%/0 2px no-repeat;transition:background-size .25s}
+body.virage-page .main-menu > a:not(.phone-btn):hover{background-size:100% 2px;color:var(--ink)}
+body.virage-page .phone-btn{background:var(--ink);color:#fff!important;border-radius:99px;font-weight:700;border:2px solid var(--ink);transition:transform .18s,box-shadow .18s}
+body.virage-page .phone-btn:hover{transform:translate(-2px,-2px);box-shadow:3px 4px 0 var(--lime);background:var(--ink)}
+body.virage-page .menu-toggle{border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:12px}
+
+/* ---------- Boutons ---------- */
+body.virage-page .btn{min-height:54px;padding:14px 28px;font-size:15px;font-weight:700;border:2px solid var(--ink);border-radius:99px;transition:transform .18s,box-shadow .18s,background .18s}
+body.virage-page .btn:hover{transform:translate(-2px,-3px)}
+body.virage-page .btn:active{transform:none;box-shadow:none}
+body.virage-page .btn-primary{background:var(--ink);color:#fff}
+body.virage-page .btn-primary:hover{background:var(--ink);box-shadow:4px 5px 0 var(--lime)}
+body.virage-page .btn-light,
+body.virage-page .btn-secondary{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+body.virage-page .btn-light:hover,
+body.virage-page .btn-secondary:hover{background:transparent;box-shadow:4px 5px 0 var(--ink)}
+
+/* ---------- Hero ---------- */
+body.virage-page .home-hero{position:relative;overflow:hidden;isolation:isolate;background:var(--lime);color:var(--ink)}
+body.virage-page .home-hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 640' preserveAspectRatio='none'%3E%3Cpath d='M-40 560 C 260 560, 380 380, 640 380 S 1040 120, 1480 90' fill='none' stroke='%23171a17' stroke-opacity='.12' stroke-width='64' stroke-linecap='round'/%3E%3Cpath d='M-40 560 C 260 560, 380 380, 640 380 S 1040 120, 1480 90' fill='none' stroke='%23171a17' stroke-opacity='.35' stroke-width='3' stroke-dasharray='3 26' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+body.virage-page .home-hero-inner{width:min(1240px,calc(100% - 10%));padding:52px 0 96px;gap:44px;min-height:0}
+body.virage-page .home-kicker{background:var(--ink);color:var(--lime);border-radius:99px;border:0;font-size:13px;font-weight:600;padding:7px 16px;letter-spacing:.2px}
+body.virage-page .home-hero h1{color:var(--ink);font-size:clamp(2.4rem,5vw,4.6rem);line-height:.98;letter-spacing:-.035em;margin-bottom:22px;animation:vg-rise .7s cubic-bezier(.2,.8,.2,1) both}
+body.virage-page .home-lead{color:#2a2f28;font-size:17px;line-height:1.7;max-width:540px;animation:vg-rise .7s .25s cubic-bezier(.2,.8,.2,1) both}
+body.virage-page .home-actions{animation:vg-rise .7s .4s cubic-bezier(.2,.8,.2,1) both}
+body.virage-page .hero-points span{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:99px;font-weight:600;font-size:13px;box-shadow:2px 3px 0 var(--ink)}
+body.virage-page .home-hero-panel{padding:0;background:var(--ink);border:0;border-radius:32px;box-shadow:10px 12px 0 var(--ink);transform:rotate(1.5deg);transition:transform .4s cubic-bezier(.2,.8,.2,1);background:var(--lime-deep)}
+body.virage-page .home-hero-panel:hover{transform:rotate(0)}
+body.virage-page .home-hero-panel img{border-radius:30px;height:410px}
+body.virage-page .price-stamp{right:-14px;bottom:auto;top:-18px;width:132px;height:132px;padding:0;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 5px 0 #fff;transform:rotate(8deg)}
+body.virage-page .price-stamp span{color:#cfd5c8;font-size:12px;font-weight:600}
+body.virage-page .price-stamp strong{color:var(--lime);font-family:var(--display);font-size:38px;letter-spacing:-.04em}
+body.virage-page .price-stamp em{color:#cfd5c8;font-size:11px}
+
+/* ---------- Bandeau de preuves + défilant ---------- */
+body.virage-page .home-proof{width:min(1240px,calc(100% - 10%));margin:-56px auto 0;gap:14px}
+body.virage-page .home-proof article{background:#fff;border:2px solid var(--ink);border-radius:var(--radius);box-shadow:5px 6px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+body.virage-page .home-proof article:hover{transform:translate(-2px,-3px);box-shadow:7px 9px 0 var(--ink)}
+body.virage-page .home-proof strong{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.03em;color:var(--ink)}
+body.virage-page .home-proof span{color:var(--muted)}
+.vg-ticker{background:var(--ink);color:var(--lime);overflow:hidden;white-space:nowrap;padding:12px 0;margin-top:64px}
+.vg-ticker-track{display:inline-flex;gap:28px;font:700 22px 'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.02em;animation:vg-marquee 38s linear infinite;will-change:transform}
+.vg-ticker-track i{font-style:normal;color:#fff}
+
+/* ---------- Sections ---------- */
+body.virage-page .home-intro,
+body.virage-page .home-services,
+body.virage-page .home-advice,
+body.virage-page .home-editorial,
+body.virage-page .home-process,
+body.virage-page .tariff-panel,
+body.virage-page .shop-preview,
+body.virage-page .zones,
+body.virage-page .reviews,
+body.virage-page .faq,
+body.virage-page .contact{background:#fff}
+body.virage-page .gray,
+body.virage-page .home-editorial.gray{background:var(--paper)}
+body.virage-page .section-heading h2{color:var(--ink)}
+body.virage-page .section-heading p{color:var(--muted)}
+body.virage-page .home-copy-card{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none;transition:border-color .2s,box-shadow .2s}
+body.virage-page .home-copy-card:hover{border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.virage-page .home-copy-card.soft{background:var(--paper)}
+body.virage-page .home-image-frame img{border-radius:32px;box-shadow:10px 12px 0 var(--ink)}
+
+/* Étapes */
+body.virage-page .process-line article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:transform .2s,box-shadow .2s}
+body.virage-page .process-line article:hover{transform:translateY(-4px);box-shadow:-5px 6px 0 var(--lime)}
+body.virage-page .process-line span{background:var(--lime);color:var(--ink);border-radius:50%;font-family:var(--display);font-weight:800}
+
+/* Services, produits, tarifs, avis */
+body.virage-page .service-deep-grid article,
+body.virage-page .product-card,
+body.virage-page .tariff-grid article,
+body.virage-page .review-grid article{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none;transition:transform .2s,border-color .2s,box-shadow .2s;overflow:hidden}
+body.virage-page .service-deep-grid article:hover,
+body.virage-page .product-card:hover,
+body.virage-page .tariff-grid article:hover,
+body.virage-page .review-grid article:hover{transform:translate(-2px,-3px);border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.virage-page .service-deep-grid a,
+body.virage-page .product-card a{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:4px}
+body.virage-page .product-card > span,
+body.virage-page .pill{display:inline-block;background:var(--lime);color:var(--ink);border-radius:99px;font-weight:600;font-size:13px;padding:4px 12px}
+body.virage-page .product-card strong,
+body.virage-page .tariff-grid strong{color:var(--ink);font-family:var(--display);font-weight:800;letter-spacing:-.02em}
+body.virage-page .review-grid strong{color:var(--moss)}
+
+/* Zones */
+body.virage-page .zone-family-card{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none}
+body.virage-page .zone-family-card[open]{border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.virage-page .zone-family-card summary{color:var(--ink);font-family:var(--display);font-weight:800}
+body.virage-page .zone-family-card summary::after{background:var(--lime);color:var(--ink);border-radius:50%}
+body.virage-page .zone-family-card a{color:var(--ink);border-radius:99px}
+body.virage-page .zone-family-card a:hover,
+body.virage-page .zone-family-card a.active{background:var(--lime);color:var(--ink);border-color:var(--ink)}
+
+/* FAQ */
+body.virage-page .faq-list details{border:2px solid var(--line);border-radius:18px;background:#fff;box-shadow:none;transition:border-color .2s,box-shadow .2s}
+body.virage-page .faq-list details[open]{border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.virage-page .faq-list summary{color:var(--ink);font-weight:600}
+body.virage-page .faq-list p{color:var(--muted)}
+
+/* Contact : bloc citron vert */
+body.virage-page .contact{background:var(--lime);border-radius:0;position:relative}
+body.virage-page .contact h2,
+body.virage-page .contact p{color:var(--ink)}
+body.virage-page .big-phone a{color:var(--ink);font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:clamp(2rem,4vw,3rem);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px}
+body.virage-page .contact-form{background:#fff;border:2px solid var(--ink);border-radius:var(--radius);padding:24px;box-shadow:8px 10px 0 var(--ink)}
+body.virage-page .contact-form input,
+body.virage-page .contact-form select,
+body.virage-page .contact-form textarea{border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+body.virage-page .contact-form input:focus,
+body.virage-page .contact-form select:focus,
+body.virage-page .contact-form textarea:focus{border-color:var(--ink);outline:none}
+
+/* Pied de page */
+body.virage-page .footer{background:var(--ink);color:#fff}
+body.virage-page .footer h3{color:var(--lime)}
+body.virage-page .footer p,
+body.virage-page .footer a{color:#b8bfb1}
+body.virage-page .footer a:hover{color:var(--lime)}
+body.virage-page .footer .brand strong{color:#fff}
+body.virage-page .footer .brand small{color:#b8bfb1}
+body.virage-page .footer .brand-mark{background:var(--lime);color:var(--ink)}
+body.virage-page .footer-bottom{border-top:1px solid #353b33;color:#b8bfb1}
+
+/* Boutons flottants mobiles */
+body.virage-page .floating-cta a{background:var(--ink);color:#fff;border-radius:99px;border:2px solid var(--ink)}
+body.virage-page .floating-cta a:first-child{background:var(--lime);color:var(--ink)}
+body.virage-page .floating-cta strong,
+body.virage-page .floating-cta span{color:inherit}
+
+/* ---------- Animations ---------- */
+@keyframes vg-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes vg-marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Mobile ---------- */
+@media(max-width:980px){
+  body.virage-page .home-hero-inner{padding-bottom:84px}
+  body.virage-page .home-hero-panel{max-width:560px;transform:none}
+  body.virage-page .home-proof{margin-top:-48px}
+}
+@media(max-width:760px){
+  body.virage-page .home-hero-inner{padding:30px 0 72px}
+  body.virage-page .home-hero h1{font-size:clamp(2.2rem,10.5vw,3.2rem)}
+  body.virage-page .home-hero-panel{box-shadow:7px 8px 0 var(--ink)}
+  body.virage-page .home-hero-panel img{height:280px}
+  body.virage-page .price-stamp{width:104px;height:104px;right:-6px;top:-14px}
+  body.virage-page .price-stamp strong{font-size:28px}
+  body.virage-page .home-actions{flex-direction:column}
+  body.virage-page .home-actions .btn{width:100%}
+  body.virage-page .home-image-frame img{box-shadow:7px 8px 0 var(--ink)}
+  body.virage-page .contact-form{box-shadow:6px 7px 0 var(--ink)}
+  .vg-ticker-track{font-size:18px;gap:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.virage-page *,body.virage-page *::before,body.virage-page *::after{animation:none!important;transition:none!important}
+  .vg-ticker-track{animation:none!important}
+}
+
+/* ---------- Mobile : image au-dessus des boutons, cartes sur 2 colonnes ---------- */
+@media(max-width:760px){
+  body.virage-page .home-hero-inner{display:flex;flex-direction:column;gap:18px;align-items:stretch}
+  body.virage-page .home-hero-copy{display:contents}
+  body.virage-page .home-kicker{order:1;align-self:flex-start}
+  body.virage-page .home-hero h1{order:2;margin-bottom:0}
+  body.virage-page .home-lead{order:3;margin:0}
+  body.virage-page .home-hero-panel{order:4;width:100%;max-width:none;margin:6px 0 4px}
+  body.virage-page .home-actions{order:5}
+  body.virage-page .hero-points{order:6}
+
+  body.virage-page .home-proof,
+  body.virage-page .process-line,
+  body.virage-page .service-deep-grid,
+  body.virage-page .tariff-grid,
+  body.virage-page .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
+  body.virage-page .home-proof article{min-height:0;padding:14px;box-shadow:3px 4px 0 var(--ink)}
+  body.virage-page .home-proof strong{font-size:22px}
+  body.virage-page .home-proof span{font-size:12.5px;line-height:1.4}
+  body.virage-page .process-line article,
+  body.virage-page .tariff-grid article{padding:14px}
+  body.virage-page .process-line h3,
+  body.virage-page .tariff-grid h3,
+  body.virage-page .service-deep-grid h3,
+  body.virage-page .product-card h3{font-size:16px;line-height:1.15}
+  body.virage-page .process-line p,
+  body.virage-page .tariff-grid p,
+  body.virage-page .service-deep-grid p,
+  body.virage-page .product-card p{font-size:12.5px;line-height:1.45}
+  body.virage-page .tariff-grid strong,
+  body.virage-page .product-card strong{font-size:15px}
+  body.virage-page .service-deep-grid img,
+  body.virage-page .product-card img{height:110px;width:100%;object-fit:cover}
+  body.virage-page .service-deep-grid article{padding-bottom:12px}
+  body.virage-page .service-deep-grid h3,
+  body.virage-page .service-deep-grid p,
+  body.virage-page .service-deep-grid a{margin-left:12px;margin-right:12px}
+  body.virage-page .service-deep-grid a,
+  body.virage-page .product-card a{font-size:13px}
+}
+
+/* ---------- Bloc « Toutes nos pages » (en bas, avant le pied de page) ---------- */
+body.virage-page .all-pages{background:var(--paper);border-top:1px solid var(--line);padding:56px 5% 40px}
+body.virage-page .all-pages > *{max-width:1240px;margin-left:auto;margin-right:auto}
+body.virage-page .all-pages-head{margin-bottom:26px;text-align:left}
+body.virage-page .all-pages-head h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 8px}
+body.virage-page .all-pages-head p{margin:0;font-size:15px}
+body.virage-page .all-pages section,
+body.virage-page .all-pages .zones,
+body.virage-page .all-pages .home-editorial{background:transparent!important;padding:22px 0 0!important;margin:0 auto;width:auto}
+body.virage-page .all-pages .section-heading{text-align:left;margin:0 0 14px;padding:0}
+body.virage-page .all-pages .section-heading h2{font-size:18px;letter-spacing:-.02em;margin:0 0 6px}
+body.virage-page .all-pages .section-heading p{font-size:14px;margin:0}
+body.virage-page .all-pages .zone-family-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;align-items:start}
+body.virage-page .all-pages .zone-family-grid.single{grid-template-columns:1fr}
+body.virage-page .all-pages .zone-family-card{padding:0}
+body.virage-page .all-pages .zone-family-card summary{padding:14px 18px;font-size:15px}
+body.virage-page .all-pages .zone-family-card > div,
+body.virage-page .all-pages .zone-family-card.wide > div{display:flex;flex-wrap:wrap;gap:8px;padding:4px 18px 18px}
+body.virage-page .all-pages .zone-family-card a{font-size:13px;padding:6px 12px;border:1px solid var(--line);background:#fff;text-decoration:none}
+body.virage-page .all-pages .zone-family-card > h3{font-size:15px;margin:0;padding:16px 18px 4px}
+@media(max-width:760px){
+  body.virage-page .all-pages{padding:40px 5% 28px}
+  body.virage-page .all-pages .zone-family-grid{grid-template-columns:1fr}
+}
+
+/* ---------- Cartes : contenu centré, hauteurs égales, boutons alignés en bas ---------- */
+body.virage-page .process-line article,
+body.virage-page .tariff-grid article,
+body.virage-page .home-proof article,
+body.virage-page .service-deep-grid article,
+body.virage-page .product-card{display:flex;flex-direction:column;align-items:center;text-align:center}
+body.virage-page .process-line article > span{margin:0 auto 12px}
+body.virage-page .process-line h3,
+body.virage-page .tariff-grid h3,
+body.virage-page .service-deep-grid h3,
+body.virage-page .product-card h3{margin:0 0 8px;text-align:center}
+body.virage-page .process-line p,
+body.virage-page .tariff-grid p,
+body.virage-page .service-deep-grid p,
+body.virage-page .product-card p{margin:0 0 12px;text-align:center}
+body.virage-page .tariff-grid strong{display:inline-block;background:var(--lime);color:var(--ink);border-radius:99px;padding:5px 14px;margin:0 0 12px;font-size:15px;line-height:1.2}
+body.virage-page .service-deep-grid article{padding:0 0 18px}
+body.virage-page .service-deep-grid img,
+body.virage-page .product-card img{width:100%;object-fit:cover;object-position:center;margin:0 0 14px}
+body.virage-page .service-deep-grid h3,
+body.virage-page .service-deep-grid p,
+body.virage-page .service-deep-grid a{margin-left:16px;margin-right:16px}
+body.virage-page .service-deep-grid a,
+body.virage-page .product-card a{margin-top:auto;margin-bottom:0;text-align:center;justify-content:center}
+body.virage-page .service-deep-grid p{margin-bottom:12px}
+body.virage-page .product-card{padding:0 14px 18px}
+body.virage-page .product-card img{width:calc(100% + 28px);margin-left:-14px;margin-right:-14px;height:170px}
+body.virage-page .product-card > span{margin:0 0 10px}
+body.virage-page .product-card strong{display:block;margin:0 0 10px}
+body.virage-page .product-grid.compact{align-items:stretch}
+@media(max-width:760px){
+  body.virage-page .product-grid .product-card:last-child:nth-child(odd){grid-column:1/-1}
+  body.virage-page .product-card img{height:120px}
+  body.virage-page .product-grid .product-card:last-child:nth-child(odd) img{height:150px}
+  body.virage-page .service-deep-grid img{height:110px}
+  body.virage-page .home-proof article{align-items:center;justify-content:center}
+  body.virage-page .home-proof strong{margin-bottom:4px}
+  body.virage-page .tariff-grid strong{font-size:13.5px;padding:4px 12px}
+  body.virage-page .service-deep-grid h3,
+  body.virage-page .service-deep-grid p,
+  body.virage-page .service-deep-grid a{margin-left:12px;margin-right:12px}
+}
+body.virage-page .product-card img{max-width:none;align-self:stretch}
+body.virage-page .all-pages .zone-family-grid,
+body.virage-page .all-pages .section-heading,
+body.virage-page .all-pages > section > *{width:100%;max-width:none;margin-left:0;margin-right:0}
+@media(max-width:760px){
+  body.virage-page .all-pages .zone-family-grid:not(.single){grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  body.virage-page .all-pages .zone-family-grid:not(.single) .zone-family-card summary{padding:12px 12px;font-size:13.5px;gap:8px}
+  body.virage-page .all-pages .zone-family-grid:not(.single) .zone-family-card summary::after{width:24px;height:24px;flex:none}
+  body.virage-page .all-pages .zone-family-card.other-zone-card{grid-column:1/-1}
+}
+
+/* =====================================================================
+   Pages intérieures (dimanche, etc.) — gabarit « hero local »
+   ===================================================================== */
+body.virage-page .hero.local-hero,
+body.virage-page .refined-hero{position:relative;overflow:hidden;isolation:isolate;background:var(--lime);color:var(--ink)}
+body.virage-page .hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 640' preserveAspectRatio='none'%3E%3Cpath d='M-40 560 C 260 560, 380 380, 640 380 S 1040 120, 1480 90' fill='none' stroke='%23171a17' stroke-opacity='.12' stroke-width='64' stroke-linecap='round'/%3E%3Cpath d='M-40 560 C 260 560, 380 380, 640 380 S 1040 120, 1480 90' fill='none' stroke='%23171a17' stroke-opacity='.35' stroke-width='3' stroke-dasharray='3 26' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+body.virage-page .hero::after{display:none}
+body.virage-page .refined-hero .hero-inner{padding:40px 0 92px;min-height:0;gap:44px}
+body.virage-page .breadcrumb,
+body.virage-page .breadcrumb a{color:#2a2f28;font-size:13px;font-weight:600}
+body.virage-page .hero h1{color:var(--ink);font-size:clamp(2.1rem,4.4vw,3.8rem);line-height:1;letter-spacing:-.035em;margin:10px 0 18px}
+body.virage-page .hero-copy p{color:#2a2f28;font-size:16.5px;line-height:1.65}
+body.virage-page .hero-copy p.breadcrumb{font-size:13px;margin:0}
+body.virage-page .hero-copy .offer{display:inline-block;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:9px 18px;font-size:14px;line-height:1.4;box-shadow:none;margin:0 0 16px}
+body.virage-page .hero-copy .offer strong{color:var(--lime)}
+body.virage-page .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+body.virage-page .hero-visual{position:relative}
+body.virage-page .hero-photo{display:block;width:100%;border:0;border-radius:32px;box-shadow:10px 12px 0 var(--ink);transform:rotate(1.5deg);object-fit:cover;max-height:420px}
+body.virage-page .key-card{position:absolute;right:-12px;top:-18px;bottom:auto;left:auto;width:132px;height:132px;border-radius:50%;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 5px 0 #fff;display:grid;place-content:center;text-align:center;padding:0;transform:rotate(8deg)}
+body.virage-page .key-card span{color:#cfd5c8;font-size:12px;font-weight:600}
+body.virage-page .key-card strong{color:var(--lime);font-family:var(--display);font-size:22px;letter-spacing:-.03em;line-height:1.05}
+body.virage-page .key-card em{color:#cfd5c8;font-size:10.5px;font-style:normal;line-height:1.2;padding:0 14px}
+
+/* Chiffres clés */
+body.virage-page .stats.refined-stats{width:min(1140px,calc(100% - 10%));margin:-56px auto 0;gap:14px;padding:0}
+body.virage-page .stat-card{background:#fff;border:2px solid var(--ink);border-radius:var(--radius);box-shadow:5px 6px 0 var(--ink);min-height:0;padding:20px;text-align:center;transition:transform .2s,box-shadow .2s}
+body.virage-page .stat-card:hover{transform:translate(-2px,-3px);box-shadow:7px 9px 0 var(--ink)}
+body.virage-page .stat-card strong{font-family:var(--display);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+body.virage-page .stat-card span{color:var(--muted)}
+body.virage-page .stat-card.hot{background:var(--ink)}
+body.virage-page .stat-card.hot strong{color:var(--lime)}
+body.virage-page .stat-card.hot span{color:#e4e9dc}
+
+/* Les 4 étapes */
+body.virage-page .editorial-ribbon{width:min(1140px,calc(100% - 10%));gap:14px;padding-top:56px}
+body.virage-page .editorial-ribbon article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:none;text-align:center;transition:transform .2s,box-shadow .2s}
+body.virage-page .editorial-ribbon article:hover{transform:translateY(-4px);box-shadow:-5px 6px 0 var(--lime)}
+body.virage-page .editorial-ribbon span{background:var(--lime);color:var(--ink);font-family:var(--display);font-size:16px}
+body.virage-page .editorial-ribbon h3{margin:0 0 8px}
+
+/* Textes + encadré sombre */
+body.virage-page .info-content,
+body.virage-page .long-copy,
+body.virage-page .local-layout,
+body.virage-page .scenario-section,
+body.virage-page .local-intro,
+body.virage-page .faq,
+body.virage-page .contact{background:#fff}
+body.virage-page .long-copy.gray,
+body.virage-page .faq.gray,
+body.virage-page .gray{background:var(--paper)}
+body.virage-page .info-content h2,
+body.virage-page .long-copy h2,
+body.virage-page .local-layout h2,
+body.virage-page .scenario-section h2,
+body.virage-page .local-intro h2,
+body.virage-page .faq h2,
+body.virage-page .context-panel h2{color:var(--ink)}
+body.virage-page .highlight-box{background:var(--ink);color:#fff;border:2px solid var(--ink);border-radius:var(--radius);box-shadow:8px 10px 0 var(--lime)}
+body.virage-page .highlight-box h3{color:#fff}
+body.virage-page .highlight-box li{color:#e4e9dc}
+body.virage-page .highlight-box li::marker{color:var(--lime)}
+
+/* Cartes d'explication */
+body.virage-page .long-grid article,
+body.virage-page .long-grid.airy article{background:#fff;border:2px solid var(--line);border-left:2px solid var(--line);border-radius:var(--radius);box-shadow:none;transition:transform .2s,border-color .2s,box-shadow .2s}
+body.virage-page .long-grid article:hover{transform:translate(-2px,-3px);border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.virage-page .long-grid article h3{color:var(--ink)}
+
+/* Serrure bloquée : photo + encadré citron vert */
+body.virage-page .context-panel{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none}
+body.virage-page .context-panel img{border-radius:20px;object-fit:cover}
+body.virage-page .note-card{background:var(--lime);color:var(--ink);border:2px solid var(--ink);border-radius:var(--radius);box-shadow:8px 10px 0 var(--ink)}
+body.virage-page .note-card h3,
+body.virage-page .note-card li{color:var(--ink)}
+body.virage-page .note-card li::marker{color:var(--ink)}
+
+/* Tarifs (6 cartes) */
+body.virage-page .scenario-grid article{background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:none;text-align:center;transition:transform .2s,border-color .2s,box-shadow .2s}
+body.virage-page .scenario-grid article:hover{transform:translate(-2px,-3px);border-color:var(--ink);box-shadow:5px 6px 0 var(--lime)}
+body.virage-page .scenario-grid h3{color:var(--ink);margin:0 0 8px}
+body.virage-page .scenario-grid p{margin:0}
+
+/* Quartiers cités */
+body.virage-page .zone-cloud span,
+body.virage-page .zone-cloud a{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:99px;font-weight:600}
+body.virage-page .zone-cloud a:hover,
+body.virage-page .zone-cloud a.active{background:var(--lime);border-color:var(--ink);color:var(--ink)}
+
+/* Zones (liens en bas de page) */
+body.virage-page .zones{background:var(--paper)}
+body.virage-page .zones .zone-family-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;align-items:start}
+body.virage-page .zones .zone-family-card summary{padding:14px 18px;font-size:15px}
+body.virage-page .zones .zone-family-card > div{display:flex;flex-wrap:wrap;gap:8px;padding:4px 18px 18px}
+body.virage-page .zones .zone-family-card a{font-size:13px;padding:6px 12px;border:1px solid var(--line);background:#fff;text-decoration:none}
+
+/* ---------- Mobile ---------- */
+@media(max-width:980px){
+  body.virage-page .refined-hero .hero-inner{padding-bottom:84px}
+  body.virage-page .hero-photo{transform:none}
+}
+@media(max-width:760px){
+  body.virage-page .refined-hero .hero-inner{padding:30px 0 72px;display:flex;flex-direction:column;gap:18px}
+  body.virage-page .hero-copy{display:contents}
+  body.virage-page .hero-copy > *{order:3}
+  body.virage-page .hero-copy .breadcrumb{order:1}
+  body.virage-page .hero h1{order:2;font-size:clamp(2.1rem,9.5vw,3rem);margin:0}
+  body.virage-page .hero-copy .offer{order:3;align-self:flex-start;font-size:13.5px;margin:0}
+  body.virage-page .hero-copy > p:not(.offer):not(.breadcrumb){order:4;font-size:15.5px;margin:0}
+  body.virage-page .hero-visual{order:5;width:100%;margin:4px 0}
+  body.virage-page .hero-actions{order:6;flex-direction:column}
+  body.virage-page .hero-actions .btn{width:100%}
+  body.virage-page .hero-photo{max-height:280px;box-shadow:7px 8px 0 var(--ink)}
+  body.virage-page .key-card{width:104px;height:104px;right:-6px;top:-14px}
+  body.virage-page .key-card strong{font-size:17px}
+  body.virage-page .key-card em{font-size:9.5px;padding:0 10px}
+  body.virage-page .stats.refined-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:-48px}
+  body.virage-page .stats.refined-stats .stat-card.hot{grid-column:1/-1}
+  body.virage-page .stat-card{padding:14px;box-shadow:3px 4px 0 var(--ink)}
+  body.virage-page .stat-card strong{font-size:22px}
+  body.virage-page .stat-card span{font-size:12.5px;line-height:1.4}
+  body.virage-page .editorial-ribbon,
+  body.virage-page .scenario-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
+  body.virage-page .editorial-ribbon{padding-top:40px}
+  body.virage-page .editorial-ribbon article,
+  body.virage-page .scenario-grid article{padding:14px}
+  body.virage-page .editorial-ribbon h3,
+  body.virage-page .scenario-grid h3{font-size:16px;line-height:1.15}
+  body.virage-page .editorial-ribbon p,
+  body.virage-page .scenario-grid p{font-size:12.5px;line-height:1.45}
+  body.virage-page .highlight-box,
+  body.virage-page .note-card{box-shadow:6px 7px 0 var(--lime)}
+  body.virage-page .note-card{box-shadow:6px 7px 0 var(--ink)}
+  body.virage-page .zones .zone-family-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  body.virage-page .zones .zone-family-card summary{padding:12px;font-size:13.5px;gap:8px}
+  body.virage-page .zones .zone-family-card summary::after{width:24px;height:24px;flex:none}
+}
+
+/* Réglages : titres de sections plus sobres, fil d'Ariane à gauche */
+body.virage-page .info-content h2,
+body.virage-page .long-copy h2,
+body.virage-page .scenario-section h2,
+body.virage-page .local-intro h2,
+body.virage-page .faq h2,
+body.virage-page .contact h2,
+body.virage-page .context-panel h2{font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.05}
+body.virage-page .breadcrumb{text-align:left;margin:0 0 4px}
+@media(max-width:760px){
+  body.virage-page .hero-copy .breadcrumb{align-self:flex-start;text-align:left}
+  body.virage-page .refined-hero .hero-inner{padding-bottom:64px}
+}
