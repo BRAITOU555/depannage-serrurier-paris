@@ -196,3 +196,44 @@ body.polished-home .floating-cta span{color:inherit}
   body.polished-home *,body.polished-home *::before,body.polished-home *::after{animation:none!important;transition:none!important}
   .vg-ticker-track{animation:none!important}
 }
+
+/* ---------- Mobile : image au-dessus des boutons, cartes sur 2 colonnes ---------- */
+@media(max-width:760px){
+  body.polished-home .home-hero-inner{display:flex;flex-direction:column;gap:18px;align-items:stretch}
+  body.polished-home .home-hero-copy{display:contents}
+  body.polished-home .home-kicker{order:1;align-self:flex-start}
+  body.polished-home .home-hero h1{order:2;margin-bottom:0}
+  body.polished-home .home-lead{order:3;margin:0}
+  body.polished-home .home-hero-panel{order:4;width:100%;max-width:none;margin:6px 0 4px}
+  body.polished-home .home-actions{order:5}
+  body.polished-home .hero-points{order:6}
+
+  body.polished-home .home-proof,
+  body.polished-home .process-line,
+  body.polished-home .service-deep-grid,
+  body.polished-home .tariff-grid,
+  body.polished-home .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
+  body.polished-home .home-proof article{min-height:0;padding:14px;box-shadow:3px 4px 0 var(--ink)}
+  body.polished-home .home-proof strong{font-size:22px}
+  body.polished-home .home-proof span{font-size:12.5px;line-height:1.4}
+  body.polished-home .process-line article,
+  body.polished-home .tariff-grid article{padding:14px}
+  body.polished-home .process-line h3,
+  body.polished-home .tariff-grid h3,
+  body.polished-home .service-deep-grid h3,
+  body.polished-home .product-card h3{font-size:16px;line-height:1.15}
+  body.polished-home .process-line p,
+  body.polished-home .tariff-grid p,
+  body.polished-home .service-deep-grid p,
+  body.polished-home .product-card p{font-size:12.5px;line-height:1.45}
+  body.polished-home .tariff-grid strong,
+  body.polished-home .product-card strong{font-size:15px}
+  body.polished-home .service-deep-grid img,
+  body.polished-home .product-card img{height:110px;width:100%;object-fit:cover}
+  body.polished-home .service-deep-grid article{padding-bottom:12px}
+  body.polished-home .service-deep-grid h3,
+  body.polished-home .service-deep-grid p,
+  body.polished-home .service-deep-grid a{margin-left:12px;margin-right:12px}
+  body.polished-home .service-deep-grid a,
+  body.polished-home .product-card a{font-size:13px}
+}
