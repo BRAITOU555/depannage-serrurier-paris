@@ -570,3 +570,13 @@ body.virage-page .info-content .content-grid{box-sizing:border-box}
   body.virage-page .hero-actions{width:100%;align-self:stretch}
   body.virage-page .zones .zone-family-card > h3{padding:16px 18px 8px;line-height:1.2}
 }
+
+/* --- Largeurs intermédiaires (tablette, fenêtre réduite) --- */
+body.virage-page .note-card{align-self:start}
+body.virage-page .context-panel h2{font-size:clamp(1.5rem,2.3vw,2.2rem);overflow-wrap:break-word}
+@media(min-width:761px) and (max-width:1240px){
+  body.virage-page .local-layout-inner{grid-template-columns:minmax(0,1fr)}
+  body.virage-page .context-panel{grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr)}
+  body.virage-page .note-card ul{columns:2;column-gap:28px}
+  body.virage-page .note-card li{break-inside:avoid}
+}
